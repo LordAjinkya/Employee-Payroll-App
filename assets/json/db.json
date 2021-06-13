@@ -1,7 +1,7 @@
 {
     "employee": [
       {
-        "name": "mohit kumar new",
+        "name": "Ajinkya Narale new",
         "gender": "male",
         "departMent": [
           "HR"
@@ -13,7 +13,7 @@
         "profileUrl": "../assets/profile-images/Ellipse 1.png"
       },
       {
-        "name": "mohit kumar test",
+        "name": "Ajinkya Narale test",
         "gender": "male",
         "departMent": [
           "HR"
@@ -25,7 +25,7 @@
         "profileUrl": "../assets/profile-images/Ellipse 1.png"
       },
       {
-        "name": "mohit",
+        "name": "Ajinkya",
         "gender": "male",
         "departMent": [
           "HR"
