@@ -123,6 +123,6 @@ const setTextValue = (id, value) => {
 }
 
 const setValue = (id, value) => {
-    const element = document.querySelector(id);
+    const element = document.querySelector(id); 
     element.value = value;
 }
