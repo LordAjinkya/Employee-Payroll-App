@@ -1,77 +1,65 @@
-/* UC-1 */
-body{
+body {
     margin: 0;
     height: 100%;
 }
-
-.header{
+.header {
     padding: 15px 0;
-    background-color: #FFFFFF;
+    background-color:powderblue;
 }
-
-.header-content{
+.header-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border: 0px solid green;
 }
-
-.logo-content{
+.logo-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     border: 0px solid green;
-    width: 80%
+    width: 80%;
 }
-
-.logo-content-img{
-    border: solid 0px #42515F
+.logo-content-img {
+    border: solid 0px #42515f;
 }
-
-.emp-text{
-    font: normal normal bold 20px/25px Montserrat;
-    font-family: "Montserrat",sans-serif;
+.emp-text {
+    font: normal normal bold 20px/25px Rubik;
+    font-family: 'Rubik', sans-serif;
     letter-spacing: 0px;
-    color: #82A70C;
-    text-transform: capitalize;
+    color: midnightblue;
 }
 
-.emp-payroll{
-    color: #42515F;
-}
-*{
-    box-sizing: border-box;
-}
-/* uc-2 */
-.form-content{
+.emp-payroll { color:midnightblue ;}
+
+* {box-sizing: border-box;}
+
+.form-content {
     min-height: calc(100%-80px);
-    background-color: #f7f7f7;
+    background-color: ghostwhite;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: cneter;
     border: 0px solid green;
 }
-
 .form{
     width: 65%;
-    padding: 44px 60px;;
-    background: white 0% 0% no-repeat padding-box;
+    padding: 44px 60px;
+    background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #f5f5f5;
     border-radius: 8px;
     opacity: 1;
 }
-
 .form-head{
-    font:  normal normal bold 24px/37px Roboto;
+    font: normal normal  24px/37px Calistoga;
+    font-family: 'Calistoga', cursive;
     letter-spacing: 0px;
-    color: #42515F;
+    color: #42515f;
     text-transform: capitalize;
     opacity: 1;
     padding-bottom: 20px;
 }
-
 .row-content{
     display: flex;
     flex-direction: row;
@@ -79,7 +67,6 @@ body{
     align-items: center;
     border: 0px solid green;
 }
-
 .label{
     min-width: 140px;
 }
@@ -88,14 +75,12 @@ label{
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
-
 .text{
     font-size: 16px;
     color: #42515f;
     opacity: 1;
-    font-family: Roboto;
+    font-family: 'Rubik', sans-serif;
 }
-
 .input{
     width: 100%;
     padding: 12px;
@@ -103,48 +88,31 @@ label{
     border-radius: 4px;
     resize: vertical;
 }
-/* uc-3 */
+
 .profile-radio-content{
     display: flex;
     flex-direction: row;
 }
-
-.profile-radio-content >label{
+.profile-radio-content > label {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
-.profile{
+.profile {
     width: 40px;
     border-radius: 50%;
     margin-left: 12px;
 }
-
-/* uc-4 */
-.label-text{
-    min-width: 140px;
-}
-
-.label-text{
-    font-size: 16px;
-    color: #42515f;
-    opacity: 1;
-    font-family: Roboto;
-}
-
-/* uc-5 */
 select{
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-    font: normal normal normal 16px Roboto;
+    font: normal normal normal 16px Rubik;
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
-} 
-/* uc-6 */
+}
 .buttonParent{
     display: flex;
     margin-bottom: 10px;
@@ -165,52 +133,16 @@ select{
     padding: 7px 7px;
     border: 1px solid #707070;
     cursor: pointer;
-    background-color: #f5f5f5;
-    border-radius: 4px;
 }
 
 .submitButton{
-    border: 1px solid #707070;
-    background-color: #f5f5f5;
     margin-right: 30px;
-}
-/* uc-9 */
-.submitButton:hover {
-    background-color: #82a70c;
-    text-decoration: none;
-    color: #f5f5f5;
 }
 
 .cancelButton{
-    margin-left: 140px;
     text-decoration: none;
     text-align: center;
-    border: 1px solid #969696;
-    background: #e2e2e2 0% 0% no-repeat padding-box;
-    border-radius: 5px;
-    opacity: 1; 
 }
-.cancelButton:hover {
-    background-color: #694242;
-    text-decoration: none;
-    color: #f5f5f5;
-
-}
-.resetButton {
-    background: #e2e2e2 0% 0% no-repeat padding-box;
-    border: 1px solid #969696;
-    border-radius: 5px;
-    opacity: 1;
-}
-.resetButton:hover {
-    background-color: #707070;
-    text-decoration: none;
-    color: #f5f5f5;  
-}
-  
-/*Adding media queries*/
-
-/* UC-6 EXTENDED */
 
 @media only screen and (max-width: 600px){
     .form{
@@ -249,13 +181,29 @@ select{
     .form{
         width: 85%;
         padding: 44px 20px;
-    } 
+    }
 }
-/* uc-10 */
+
+.button{
+    background: #B9DFFF;
+    color:cadetblue;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+}    
+.button:hover {
+    background: #016ABC;
+    color: rgb(153, 140, 140);
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+}
+
 error-output {
-    font-weight: bold;
     margin-left: 10px;
     font-size: 12px;
     font-style: italic;
     color: red;
-  }
+}

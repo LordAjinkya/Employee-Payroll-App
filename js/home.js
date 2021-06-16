@@ -17,9 +17,9 @@ const getEmployeePayrollDataFromLocalStorage = () => {
 const createInnerHTML = () => {
     const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th>"+
                        "<th>Salary</th><th>start Date</th><th>Actions</th>";
+    if ( employeePayrollList.length == 0 ) return;
     let innerHtml = `${headerHtml}`;
-    let employeePayrollList = createEmployeePayrollJSON();
-
+    
     for  ( const employeePayrollData of employeePayrollList){
         innerHtml = `${innerHtml}
          <tr>
@@ -30,10 +30,10 @@ const createInnerHTML = () => {
              <td>${employeePayrollData._gender}</td>
              <td>${getDeptHtml(employeePayrollData._department)}</td>
              <td>${employeePayrollData._salary}</td>
-             <td>${employeePayrollData._startDate}</td>
+             <td>${stringifyDate(employeePayrollData._startDate)}</td>
              <td> 
-                 <img name="${employeePayrollData._id}" onclick="remove(this)" alt="delete" src="../assets/icons/delete-black-18dp.svg">
-                 <img name="${employeePayrollData._id}" alt="Edit" onclick="update(this)" src="../assets/icons/create-black-18dp.svg">
+                 <img id="${employeePayrollData._id}" onclick ="remove(this)" alt="delete" src="../assets/icons/delete-black-18dp.svg">
+                 <img id="${employeePayrollData._id}" alt="Edit" onclick="update(this)" src="../assets/icons/create-black-18dp.svg">
              </td>
          </tr>
          `;
@@ -50,31 +50,15 @@ const getDeptHtml = (deptList) => {
     return deptHtml;
 }
 
-//create Employee Payroll JSON objects
-const createEmployeePayrollJSON = () => {
-    let employeePayrollList = [
-        {
-            _name : 'White widow',
-            _gender : 'Male',
-            _department : ['Engineering' ,
-                           'HR'],
-            _salary : '4000000',
-            _startDate : '12 Oct 2019',
-            _note : '',
-            _id : new Date().getTime(),
-            _profilePic : '../assets/profile-images/Ellipse -7.png'
-        },
-        {
-            _name : 'Homie killer',
-            _gender : 'Male',
-            _department : ['HR' ,
-                           'Finance'],
-            _salary : '4500000',
-            _startDate : '14 Nov 2019',
-            _note : '',
-            _id : new Date().getTime() + 1,
-            _profilePic : '../assets/profile-images/Ellipse -2.png'
-        }
-    ];
-    return employeePayrollList;
+// remove employee details from payroll list
+const remove = (node)=> {
+    let employeePayrollData = employeePayrollList.find(empData=>empData._id == node.id);
+    if (!employeePayrollData) return;
+    const index = employeePayrollList
+                  .map(empData=>empData._id)
+                  .indexOf(employeePayrollData._id);
+    employeePayrollList.splice(index,1);
+    localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList));
+    document.querySelector('.emp-count').textContent = employeePayrollList.length;
+    createInnerHTML();
 }
