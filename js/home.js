@@ -1,6 +1,17 @@
+//declare global variable for employee payroll list
+let employeePayrollList; 
 window.addEventListener('DOMContentLoaded', () => {
+    employeePayrollList = getEmployeePayrollDataFromLocalStorage();
+    document.querySelector('.emp-count').textContent = employeePayrollList.length;
     createInnerHTML();
+    localStorage.removeItem('editEmp');
 });
+
+//get Employee Data from local storage
+const getEmployeePayrollDataFromLocalStorage = () => {
+    return localStorage.getItem('EmployeePayrollList') ?
+                        JSON.parse(localStorage.getItem('EmployeePayrollList')) : [] ;
+}
 
 //Template literal ES6 feature 
 const createInnerHTML = () => {
@@ -43,7 +54,7 @@ const getDeptHtml = (deptList) => {
 const createEmployeePayrollJSON = () => {
     let employeePayrollList = [
         {
-            _name : 'Ajinkya Narale',
+            _name : 'White widow',
             _gender : 'Male',
             _department : ['Engineering' ,
                            'HR'],
